@@ -39,8 +39,7 @@ if (*(format + i) == '%')
 tmp = 0;
 flags = handle_flags(format + i + 1, &tmp);
 width = handle_width(args, format + i + tmp + 1, &tmp);
-prec = handle_precision(args, format + i + tmp + 1,
-            &tmp);
+prec = handle_precision(args, format + i + tmp + 1, &tmp);
 len = handle_length(format + i + tmp + 1, &tmp);
 
 f = handle_specifiers(format + i + tmp + 1);
@@ -64,10 +63,10 @@ return (cxrs);
 }
 
 /**
- * _printf - Outputs a formatted string
- * @format: Character string
- * Return:number of characters to printed
- */
+* _printf - Outputs a formatted string
+* @format: Character string
+* Return : number of characters to printe
+*/
 int _printf(const char *format, ...)
 {
 buffer_t *output;
