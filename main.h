@@ -36,15 +36,15 @@ unsigned int len;
 } buffer_t;
 
 /**
- * struct converter_s - A new type defining
- * a converter struct.
+ * struct converter_s - A new type defining a converter struct.
  * @specifier: A character representing a conversion specifier.
  * @func: A pointer to a conversion function corresponding to specifier.
  */
 typedef struct converter_s
 {
 unsigned char specifier;
-unsigned int (*func)(va_list, buffer_t *, unsigned char, int, int, unsigned char);
+unsigned int (*func)(va_list, buffer_t *, unsigned char,
+int, int, unsigned char);
 } converter_t;
 
 /**
@@ -95,8 +95,8 @@ unsigned char handle_flags(const char *flags, char *index);
 unsigned char handle_length(const char *modifier, char *index);
 int handle_width(va_list args, const char *modifier, char *index);
 int handle_precision(va_list args, const char *modifier, char *index);
-unsigned int (*handle_specifiers(const char *specifier))(va_list, buffer_t *,
-unsigned char, int, int, unsigned char);
+unsigned int(*handle_specifiers(const char *specifier))(va_list,
+buffer_t *, unsigned char, int, int, unsigned char);
 
 /*************Modifiers**************/
 unsigned int print_width(buffer_t *output, unsigned int printed,
