@@ -68,7 +68,7 @@ return (cxrs);
  *
  * Return: The number of bytes stored to the buffer.
  */
-uinsigned int print_neg_width(buffer_t *output, unsigned int printed,
+unsigned int print_neg_width(buffer_t *output, unsigned int printed,
 unsigned char flags, int wid)
 {
 unsigned int cxrs = 0;
